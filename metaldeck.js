@@ -176,7 +176,8 @@ function metalDeckCalculation(){
     var textarea =
     document.getElementById('textarea');
     textarea.value = 
-    "LAPORAN PERHITUNGAN\n\n" +
+    "LAPORAN PERHITUNGAN\n" +
+    "'Berdasarkan American National Standards Institute(ANSI) / Steel Deck Institute(SDI)'\n\n" +
     "dimensi slab:\n" +
     "Ln = " + ln + " mm\n" +
     "h = " + h + " mm\n\n" +
