@@ -75,6 +75,7 @@ var safe;
 var sign;
 var phi_mn;
 var underreinforced_or_overreinforced;
+var sign_under_or_over_reinforced;
 
 function steeldeck_design(){
     // concrete
@@ -145,18 +146,14 @@ function steeldeck_design(){
     // moment ultimate
     Mu = 1.0/ 14.0 * (comb1) * ln/1000. * ln/1000. * 1000.; // Nmm/m
 
-    //declaration of string safe and sign
-    safe;
-    sign;
-    phi_mn;
-    underreinforced_or_overreinforced;
-
     if (c_div_d <= c_div_d_balance){
         phi_mn = Mru;
         underreinforced_or_overreinforced = "under-reinforced";
+        sign_under_or_over_reinforced = "<";
     }else {
         phi_mn = Mro;
         underreinforced_or_overreinforced = "over-reinforced";
+        sign_under_or_over_reinforced = ">";
     }
 
     if(phi_mn >= Mu){
@@ -171,6 +168,7 @@ function steeldeck_design(){
                                              " ==> phi Mn = " + (phi_mn/1000000).toFixed(2) + " kNm " + sign + " Mu = " + (Mu/1000000).toFixed(2) + " kNm, [" + safe + "]";
     
 }
+
 
 function metalDeckCalculation(){
     var textarea =
@@ -203,15 +201,13 @@ function metalDeckCalculation(){
     "beban LL = " + ll + " kg/m2\n\n" +
 
     "perhitungan kondisi under-reinforced or over-reinforced?\n" +
-    "c/d = " + c_div_d.toFixed(4) + " " + sign + " c/d balance = " + c_div_d_balance.toFixed(4) + ", sehingga " + underreinforced_or_overreinforced + " condition\n\n" +
+    "c/d = " + c_div_d.toFixed(4) + " " + sign_under_or_over_reinforced + " c/d balance = " + c_div_d_balance.toFixed(4) + ", sehingga " + underreinforced_or_overreinforced + " condition\n\n" +
 
     "hasil kalkulasi:\n" +
     "momen nominal, phi Mn = phi. My\n" +
-    "phi Mn = " + (phi_mn/1000000).toFixed(2) + " kN.mm " + sign + " Mu = " + (Mu/1000000).toFixed(2) + " kNm/ m', [" + safe + "]"; 
+    "phi Mn = " + (phi_mn/1000000).toFixed(2) + " kN.m/ m' " + sign + " Mu = " + (Mu/1000000).toFixed(2) + " kNm/ m', [" + safe + "]"; 
 
 }
-
-
 
 
 // console.log("ms = " + ms)

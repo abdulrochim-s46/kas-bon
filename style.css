@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 200vh;
+        height: 220vh;
         margin: 0;
         background: linear-gradient(to right, #1f31f2, #00fbff);
     }
@@ -18,7 +18,7 @@
 }
 
 .header{
-    min-height: 200vh;
+    min-height: 220vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
     /* url("images/RSUP Kupang Design.png"); */
@@ -215,7 +215,7 @@ nav .fa{
 
 .steel-deck-properties .properties{
     text-align: left;
-    width: calc(100%/4 - 8px);
+    width: calc(100%/2 - 8px);
 }
 
 .converter .steel-deck-dimension{
@@ -241,8 +241,6 @@ nav .fa{
     text-align: left;
     width: calc(100%/2 - 8px);
 }
-
-
 
 
 
@@ -286,9 +284,9 @@ button:hover{
     .converter{
         width: 100%;
     }
-    .converter img{
-        width:500px; height:300px; padding-top: 30px;
-    }
+    main {
+        width: 50%;
+    }   
 }
 
 @keyframes fadeIn{
