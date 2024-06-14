@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 220vh;
+        height: 230vh;
         margin: 0;
         background: linear-gradient(to right, #1f31f2, #00fbff);
     }
@@ -18,7 +18,7 @@
 }
 
 .header{
-    min-height: 220vh;
+    min-height: 230vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
     /* url("images/RSUP Kupang Design.png"); */
@@ -284,9 +284,9 @@ button:hover{
     .converter{
         width: 100%;
     }
-    main {
-        width: 50%;
-    }   
+    .converter img{
+        width:300px; height:200px; padding-top: 30px;
+    }  
 }
 
 @keyframes fadeIn{
